@@ -50,6 +50,12 @@ namespace MovieHelper.Logic
             }
         }
 
+        public void PrintHelp()
+        {
+            Console.WriteLine(
+                "-c [command] \n available command(s) : sub \n\n -w [work] \n availalbe work(s) : mv -n [new name] \n\n --log : logging");
+        }
+
         private string ReadFile(string fullFileName)
         {
             string file;

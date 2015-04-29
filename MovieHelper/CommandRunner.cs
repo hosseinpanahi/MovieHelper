@@ -8,6 +8,12 @@ namespace MovieHelper
     {
         public static void RunCommands(ArgumentsParser arguments, ICoreHelper coreHelper, string directory)
         {
+            if (!string.IsNullOrEmpty(arguments["help"]))
+            {
+                coreHelper.PrintHelp();
+                return;
+            }
+
             switch (arguments["c"])
             {
                 case "sub":
